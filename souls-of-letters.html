@@ -1,0 +1,173 @@
+<!-- obs : este codigo foi criado com inspiração do jogo DarkSouls
+ autor : Jorge Luiz 1ADS-A -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Souls of Letters</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="icon.png">
+  </head>
+
+  <body>
+    <div class="background">
+    <div class="container">
+      <div class="container-historia">
+        <h1>Souls of Letters</h1>
+
+        <label for="">Ao entrar no Santuário das Cinzas, você encontra </label>
+        <p><b>Gwyn, o Senhor das Cinzas</b></p>
+        
+        <p>
+          Para derrotá-lo, não basta a espada. É preciso desvendar a
+          <b>palavra que ele esconde!</b>
+        </p>
+        <h3 id="h3_contador"></h3>
+      </div>
+
+      <div class="container-input">
+        <div>
+        Adicione uma letra: <input type="text" maxlength="1" id="input_letra" />
+        </div>
+    
+        <button onclick="verificar()">Verificar Letra</button>
+      </div>
+      <div class="boss">
+        <div class="info">
+          <h3>Gwyn.</h3>
+          <img src="gwyn.png" alt="" />
+        </div>
+        <div
+          class="barra" id="barra"
+          style="background-color: red; width: 900px; height: 15px;border:solid;border-color: cadetblue;"
+        ></div>
+      </div>
+      <div class="mensagem">
+        <div id="div_mensagem"></div>
+        <p id="mensagem1"></p>
+        <p id="mensagem2"></p>
+        <p id="mensagem3"></p>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  var letraS = 2;
+  var letraO = 2;
+  var letraU = 1;
+  var letraL = 1;
+  var letraB = 1;
+  var letraR = 1;
+  var letraN = 1;
+  var palavraSecreta = `SOULSBORN`;
+  // S — 2 -
+  // O — 2 -
+  // U — 1 -
+  // L — 1 -
+  // B — 1 -
+  // R — 1 -
+  // N — 1 -
+  var tamanhoPalavraSecreta = palavraSecreta.length;
+  var contador = tamanhoPalavraSecreta;
+  h3_contador.innerHTML = `A palavra secreta possui ${tamanhoPalavraSecreta} caracteres!`;
+  function verificar() {
+    var letraInserida = input_letra.value;
+    letraInserida = letraInserida.toUpperCase();
+
+    if (palavraSecreta.includes(letraInserida)) {
+      if (letraInserida == `S`) {
+        if (letraS <= 0) {
+          div_mensagem.innerHTML = `O caractere ${letraInserida} foi inserido anteriormente!Caracteres restantes ${contador}.`;
+        } else {
+          contador -= 1;
+          div_mensagem.innerHTML = `O caractere ${letraInserida} aparece na palavra secreta! Faltam ${contador} caracteres.`;
+          letraS -= 1;
+         barra.style.width = `${contador*100}px`
+         barra.style.transition = '0.8s'
+        }
+      }
+      if (letraInserida == `U`) {
+        if (letraU <= 0) {
+          div_mensagem.innerHTML = `O caractere ${letraInserida} foi inserido anteriormente!Caracteres restantes ${contador}.`;
+        } else {
+          contador -= 1;
+          div_mensagem.innerHTML = `O caractere ${letraInserida} aparece na palavra secreta! Faltam ${contador} caracteres.`;
+          letraU -= 1;
+          barra.style.width = `${contador*100}px`
+         barra.style.transition = '0.8s'
+        }
+      }
+      if (letraInserida == `B`) {
+        if (letraB <= 0) {
+          div_mensagem.innerHTML = `O caractere ${letraInserida} foi inserido anteriormente!Caracteres restantes ${contador}.`;
+        } else {
+          contador -= 1;
+          div_mensagem.innerHTML = `O caractere ${letraInserida} aparece na palavra secreta! Faltam ${contador} caracteres.`;
+          letraB -= 1;
+          barra.style.width = `${contador*100}px`
+         barra.style.transition = '0.8s'
+        }
+      }
+      if (letraInserida == `N`) {
+        if (letraN <= 0) {
+          div_mensagem.innerHTML = `O caractere ${letraInserida} foi inserido anteriormente!Caracteres restantes ${contador}.`;
+        } else {
+          contador -= 1;
+          div_mensagem.innerHTML = `O caractere ${letraInserida} aparece na palavra secreta! Faltam ${contador} caracteres.`;
+          letraN -= 1;
+          barra.style.width = `${contador*100}px`
+         barra.style.transition = '0.8s'
+        }
+      }
+      if (letraInserida == `R`) {
+        if (letraR <= 0) {
+          div_mensagem.innerHTML = `O caractere ${letraInserida} foi inserido anteriormente!Caracteres restantes ${contador}.`;
+        } else {
+          contador -= 1;
+          div_mensagem.innerHTML = `O caractere ${letraInserida} aparece na palavra secreta! Faltam ${contador} caracteres.`;
+          letraR -= 1;
+          barra.style.width = `${contador*100}px`
+         barra.style.transition = '0.8s'
+        }
+      }
+      if (letraInserida == `O`) {
+        if (letraO <= 0) {
+          div_mensagem.innerHTML = `O caractere ${letraInserida} foi inserido anteriormente!Caracteres restantes ${contador}.`;
+        } else {
+          contador -= 1;
+          div_mensagem.innerHTML = `O caractere ${letraInserida} aparece na palavra secreta! Faltam ${contador} caracteres.`;
+          letraO -= 1;
+          barra.style.width = `${contador*100}px`
+         barra.style.transition = '0.8s'
+        }
+      }
+      if (letraInserida == `L`) {
+        if (letraL <= 0) {
+          div_mensagem.innerHTML = `O caractere ${letraInserida} foi inserido anteriormente!Caracteres restantes ${contador}.`;
+        } else {
+          contador -= 1;
+          div_mensagem.innerHTML = `O caractere ${letraInserida} aparece na palavra secreta! Faltam ${contador} caracteres.`;
+          letraL -= 1;
+          barra.style.width = `${contador*100}px`
+         barra.style.transition = '0.8s'
+        }
+        
+      }
+
+      if (contador == 0) {
+        div_mensagem.innerHTML = ``;
+        mensagem1.innerHTML=`"Ao revelar a palavra oculta`
+        mensagem2.innerHTML=`<b style="color:red">SOULSBORN</b>`
+        mensagem3.innerHTML=`a chama se apaga e o Senhor das Cinzas se curva diante de você, selando o destino deste mundo."`
+      }
+    } else {
+      div_mensagem.innerHTML = `O caractere ${letraInserida} NÃO aparece na palavra secreta! Faltam ${contador} caracteres`;
+    }
+    input_letra.focus();
+    input_letra.value = "";
+  }
+</script>

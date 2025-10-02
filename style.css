@@ -1,0 +1,106 @@
+
+  @import url("https://use.typekit.net/oib5rrt.css");
+*{
+  margin: 0px;
+  font-family: "cinzel";
+}
+
+body{
+  background-image: url(background.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  
+}
+.background{
+  background-color: white;
+  border-radius: 15px;
+  width: 905px;
+  height: 100vh;
+  border: solid;
+  border-color: aqua;
+  margin: 15px 0;
+}
+.container{
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+}
+.container .container-historia{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  h1{
+    margin-bottom: 10px;
+    text-decoration: underline;
+    
+  }
+}
+.container .container-input{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+
+.container .boss{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info{
+  display: flex;
+  flex-direction: row;
+  justify-content:  center;
+  align-items: center;
+  width: fit-content;
+}
+
+.info h3{
+  align-self: flex-end;
+}
+.info .barra{
+  align-self: center;
+}
+
+img{
+  height: 300px;
+  width: 300px;
+  align-self: center;
+}
+
+input{
+  border-radius: 10px;
+  border-style: solid;
+}
+button{
+  margin-top: 10px;
+}
+
+.mensagem{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+button{
+  border-radius: 10px;
+  height: 30px;
+  width: 160px;
+  border: none;
+  font-weight: bold;
+  background-color: rgb(39, 240, 240);
+  transition: 0.4s;
+  color: black;
+}
+
+button:hover{
+  background-color: black;
+  color: white;
+  transition: 0.4s;
+}
